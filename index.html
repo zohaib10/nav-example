@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="/">
+            <img src="logo.png" alt="E-Shop Logo" />
+          </a>
+          <!-- Mobile Toggle Button -->
+          <div class="mobile-toggle" onclick="toggleMobileMenu()">
+            <i class="fa fa-bars"></i>
+          </div>
+        </div>
+
+        <!-- Product Categories -->
+        <ul class="nav-links">
+          <li><a href="/categories/men">Men</a></li>
+          <li><a href="/categories/women">Women</a></li>
+          <li><a href="/categories/kids">Kids</a></li>
+          <li><a href="/categories/sale">Sale</a></li>
+        </ul>
+
+        <!-- Product Categories -->
+        <div class="mobile-nav" id="mobile-nav">
+          <ul class="nav-links-mobile">
+            <li><a href="/categories/men">Men</a></li>
+            <li><a href="/categories/women">Women</a></li>
+            <li><a href="/categories/kids">Kids</a></li>
+            <li><a href="/categories/sale">Sale</a></li>
+          </ul>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search for products"
+            aria-label="Search"
+          />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+
+        <!-- User Links -->
+        <div class="user-links">
+          <a href="/login" title="Login">
+            <i class="fa fa-user"></i>
+          </a>
+          <a href="/wishlist" title="Wishlist">
+            <i class="fa fa-heart"></i>
+          </a>
+          <a href="/cart" title="Shopping Cart">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="cart-count">3</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      function toggleMobileMenu() {
+        const element = document.getElementById("mobile-nav");
+        const displayStyle = element.style.display;
+        if (displayStyle === "block") {
+          element.style.display = "none";
+        } else {
+          element.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
